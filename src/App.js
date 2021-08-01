@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 import Particles from 'react-particles-js';
-import  './Components/main.js'
 import Skills from './Components/Skills';
 import Work from './Components/Work';
 import Contact from './Components/Contact';
