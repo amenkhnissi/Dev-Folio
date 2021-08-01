@@ -22,30 +22,30 @@ const Skills = () => {
     },
 ]
     return (
-        <section class="skills-section" id="skills">
-        <h2 class="section-title">Skills</h2>
+        <section className="skills-section" id="skills">
+        <h2 className="section-title">Skills</h2>
 
-        <div class="skills__container bd-grid">          
+        <div className="skills__container bd-grid">          
             <div>
-                <h2 class="skills__subtitle">Profesional Skills</h2>
-                <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-               {skills.map(elem =>  <div class="skills__data">
-                    <div class="skills__names">
-                        <i class='bx bxl-html5 skills__icon'></i>
-                        <span class="skills__name">{elem.skillsname}</span>
+                <h2 className="skills__subtitle">Profesional Skills</h2>
+                <p className="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+               {skills.map((elem,key) =>  <div key={key} className="skills__data">
+                    <div className="skills__names">
+                        <i className='bx bxl-html5 skills__icon'></i>
+                        <span className="skills__name">{elem.skillsname}</span>
                     </div>
-                    <div class="skills__bar" style={{ width: elem.skillsperc }}>
+                    <div className="skills__bar" style={{ width: elem.skillsperc }}>
 
                     </div>
                     <div>
-                        <span class="skills__percentage">{elem.skillsperc}</span>
+                        <span className="skills__percentage">{elem.skillsperc}</span>
                     </div>
                 </div>    )}
 
             </div>
             
             <div className="skills__img">              
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="" class="skills__img"/>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="" className="skills__img"/>
             </div>
         </div>
     </section>

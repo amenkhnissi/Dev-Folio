@@ -1,15 +1,20 @@
 import React from 'react'
+import {SocialNetworks} from './Home'
 
 const Footer = () => {
     return (
-        <footer class="footer">
-        <p class="footer__title">Amen Allah khnissi</p>
-        <div class="footer__social">
-            <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <footer className="footer">
+        <p className="footer__title">Amen Allah khnissi</p>
+        <div className="footer__social">
+        {SocialNetworks.map((elem,key) => 
+                   <a key={key} href={elem
+                    .network} className="footer__icon">{elem.icon}</a>
+
+                )}
+           
         </div>
-        <p>&#169; Welcome 2021</p>
+        <p><i className
+        ='bx bx-copyright' ></i> copyright 2021</p>
     </footer>
     )
 }

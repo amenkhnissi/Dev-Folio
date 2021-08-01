@@ -187,6 +187,8 @@ position: absolute;
 .home{
   height: calc(100vh - 3rem);
   row-gap: 1rem;
+  z-index: 10;
+  position: relative;
 }
 .home__data{
   align-self: center;
@@ -217,6 +219,7 @@ position: absolute;
   bottom: 0;
   width: 295px;
 }
+
 
 /*BUTTONS*/
 .button{
@@ -345,6 +348,10 @@ position: absolute;
 
 
 /* ===== CONTACT =====*/
+.contact{
+position: relative;
+z-index: 11;
+}
 .contact__input{
   width: 100%;
   font-size: var(--normal-font-size);
@@ -385,6 +392,9 @@ position: absolute;
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2)
+}
+.footer__icon:hover{
+  color: var(--first-color);
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -481,6 +491,7 @@ position: absolute;
     margin-left: auto;
     margin-right: auto;
   }
+  
   .home__img{
     right: 10%;
   }
@@ -500,6 +511,7 @@ position: absolute;
   position:absolute;
   height: 100vh;
   width: 100vw;
+  z-index: 1;
   
 }
 

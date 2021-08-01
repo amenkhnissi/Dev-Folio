@@ -12,24 +12,62 @@ const showMenu = (toggleId, navId) =>{
         })
     }
 }
-showMenu('nav-toggle','nav-menu')
+showMenu("nav-toggle","nav-menu")
+
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');   
+
+function linkAction(){
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+  
+  /*Remove menu mobile*/
+  const navMenu = document.getElementById('nav-menu')
+  navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 const Navbar = () => {
+    // Nav Links Tab
+    let NavLinks = [
+        {
+        title : "Home" ,
+        to : "home"
+    },
+        {
+        title : "About" ,
+        to : "about"
+    },
+        {
+        title : "Skills" ,
+        to : "skills"
+    },
+        {
+        title : "Work" ,
+        to : "work"
+    },
+        {
+        title : "Contact" ,
+        to : "contact"
+    },
+]
     return (
       
         <header className="l-header">
             <nav className="nav bd-grid">
                 <div>
-                    <a href="#" className="nav__logo">Amen</a>
+                    <a href="#home" className="nav__logo">Amen</a>
                 </div>
  
                 <div className="nav__menu " id="nav-menu">
                     <ul className="nav__list">
-                        <li className="nav__item"><LinkS to="home" className="nav__link  ">Home</LinkS></li>
-                        <li className="nav__item"><LinkS to="about" className="nav__link ">About</LinkS></li>
-                        <li className="nav__item"><a href="#skills" className="nav__link  active">Skills</a></li>
-                        <li className="nav__item"><a href="#work" className="nav__link">Work</a></li>
-                        <li className="nav__item"><a href="#contact" className="nav__link">Contact</a></li>
+                        {NavLinks.map((elem,key) => 
+        <li key={key} className="nav__item"><LinkS to={elem.to} className="nav__link ">{elem.title}</LinkS></li>
+
+                        )}
+                        
                     </ul>
                 </div>
 

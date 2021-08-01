@@ -44,16 +44,18 @@ function App() {
     <Router>
     
     <Navbar />
-    <main className="l-main">
-    <Particles params={{ particles}}
-   />
+   
+    <Particles params={{ particles}}/>
    <Home />
+   
+  
    <About />
    <Skills />
    <Work />
+   <Particles params={{ particles}}/>
    <Contact />
    <Footer />
-   </main>
+
    </Router>
 
   );
