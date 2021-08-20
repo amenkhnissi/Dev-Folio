@@ -138,10 +138,14 @@ img{
 }
 .nav__item{
   margin-bottom: var(--mb-4);
+    cursor: pointer;
+
 }
 .nav__link{
   position: relative;
   color: #fff;
+    cursor: pointer;
+
 }
 
 
