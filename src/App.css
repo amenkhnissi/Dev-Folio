@@ -138,19 +138,19 @@ img{
 }
 .nav__item{
   margin-bottom: var(--mb-4);
-    cursor: pointer;
 
 }
 .nav__link{
   position: relative;
   color: #fff;
-    cursor: pointer;
 
 }
 
 
 .nav__link:hover{
   position: relative;
+    cursor: pointer;
+
 }
 
 .nav__link:hover::after{
@@ -161,6 +161,8 @@ img{
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
+    cursor: pointer;
+
 }
 .nav__logo{
   color: var(--second-color);
